@@ -70,6 +70,13 @@ command_loader:
     requires: []
     output_format: 'Análise de 3-5 padrões de conteúdo com gaps e oportunidades'
 
+  '*gerar-semana':
+    description: 'Gerar semana completa: briefing + 3 posts Instagram + 1 WhatsApp (pipeline automático)'
+    requires:
+      - workflows/gerar-semana-completa.md
+      - tasks/pesquisar-tendencias-task.md
+    output_format: 'Pacote semanal completo com 4 conteúdos aprovados e calendário de publicação'
+
   '*help':
     description: 'Mostrar todos os comandos disponíveis'
     requires: []
@@ -158,6 +165,10 @@ commands:
   - name: temas-evergreen
     visibility: [full, quick, key]
     description: 'Listar temas atemporais do nicho personal trainer online'
+
+  - name: gerar-semana
+    visibility: [full, quick, key]
+    description: 'Gerar semana completa: 3 posts + 1 WhatsApp em uma rodada (pipeline automático)'
 
   - name: analisar-concorrencia
     visibility: [full, quick]

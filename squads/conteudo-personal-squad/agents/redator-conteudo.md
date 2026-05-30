@@ -80,6 +80,13 @@ command_loader:
       - templates/post-instagram-tmpl.md
     output_format: 'Slide 0 (capa) + Slides 1-N + Slide final (CTA) com texto de cada'
 
+  '*gerar-semana':
+    description: 'Gerar semana completa: briefing + 3 posts Instagram + 1 WhatsApp (pipeline automático)'
+    requires:
+      - workflows/gerar-semana-completa.md
+      - tasks/criar-post-task.md
+    output_format: 'Pacote semanal completo com 4 conteúdos aprovados e calendário de publicação'
+
   '*help':
     description: 'Mostrar todos os comandos disponíveis'
     requires: []
@@ -181,6 +188,10 @@ commands:
   - name: criar-carrossel
     visibility: [full, quick, key]
     description: 'Criar textos de slides para carrossel'
+
+  - name: gerar-semana
+    visibility: [full, quick, key]
+    description: 'Gerar semana completa: 3 posts + 1 WhatsApp em uma rodada (pipeline automático)'
 
   - name: adaptar-reels
     visibility: [full, quick]

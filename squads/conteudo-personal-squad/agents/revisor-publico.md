@@ -72,6 +72,13 @@ command_loader:
     requires: []
     output_format: 'Avaliação do CTA + 2-3 alternativas se necessário'
 
+  '*gerar-semana':
+    description: 'Gerar semana completa: briefing + 3 posts Instagram + 1 WhatsApp (pipeline automático)'
+    requires:
+      - workflows/gerar-semana-completa.md
+      - tasks/revisar-post-task.md
+    output_format: 'Pacote semanal completo com 4 conteúdos aprovados e calendário de publicação'
+
   '*help':
     description: 'Mostrar todos os comandos disponíveis'
     requires: []
@@ -170,6 +177,10 @@ commands:
   - name: simplificar
     visibility: [full, quick]
     description: 'Simplificar linguagem técnica para leigos em fitness'
+
+  - name: gerar-semana
+    visibility: [full, quick, key]
+    description: 'Gerar semana completa: 3 posts + 1 WhatsApp em uma rodada (pipeline automático)'
 
   - name: checar-cta
     visibility: [full, quick]

@@ -20,6 +20,7 @@ components:
     - revisar-post-task.md
   workflows:
     - pipeline-conteudo-semanal.md
+    - gerar-semana-completa.md
   templates:
     - post-instagram-tmpl.md
     - mensagem-whatsapp-tmpl.md
