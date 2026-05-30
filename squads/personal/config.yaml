@@ -1,0 +1,19 @@
+squad:
+  name: personal
+  description: Squad de produtividade e desenvolvimento pessoal
+  created: 2026-05-29
+  version: 1.0
+
+agents:
+  - id: assistente-pessoal
+    name: Clara
+    title: Assistente de Produtividade Pessoal
+    file: agents/assistente-pessoal.md
+    specialist: James Clear (Atomic Habits)
+    domain: produtividade-pessoal
+    tier: 1
+    status: active
+
+activation:
+  syntax: "@personal:assistente-pessoal"
+  alias: "@clara"
