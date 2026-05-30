@@ -1,0 +1,300 @@
+{
+  "storyId": "LP-001",
+  "gatheredAt": "2026-05-30T00:00:00Z",
+  "source": "user",
+  "gatheredBy": "@pm",
+  "elicitationVersion": "2.0",
+  "projectName": "Faggioni Personal Studio — Landing Page",
+
+  "functional": [
+    {
+      "id": "FR-1",
+      "description": "Seção Hero com headline principal, subheadline e CTA primário para WhatsApp",
+      "priority": "P0",
+      "rationale": "Primeira impressão ao chegar pelo Instagram — deve prender em menos de 3 segundos",
+      "acceptance": ["AC-1", "AC-2"]
+    },
+    {
+      "id": "FR-2",
+      "description": "Seção Problema que espelha a dor do público-alvo (treinar sem academia, sem orientação, sem resultado)",
+      "priority": "P0",
+      "rationale": "Conexão emocional antes da oferta aumenta conversão",
+      "acceptance": ["AC-3"]
+    },
+    {
+      "id": "FR-3",
+      "description": "Seção Como Funciona explicando o processo da consultoria em 3 passos simples",
+      "priority": "P0",
+      "rationale": "Reduz objeções de 'como funciona isso online?' antes de apresentar preço",
+      "acceptance": ["AC-4"]
+    },
+    {
+      "id": "FR-4",
+      "description": "Seção Diferenciais destacando os pontos únicos da consultoria Faggioni",
+      "priority": "P1",
+      "rationale": "Justifica o valor e diferencia de concorrentes genéricos",
+      "acceptance": ["AC-5"]
+    },
+    {
+      "id": "FR-5",
+      "description": "Seção Resultados com fotos reais de alunos do studio (transformações, treinos, depoimentos)",
+      "priority": "P0",
+      "rationale": "Prova social é o fator mais decisivo para conversão em consultoria fitness",
+      "acceptance": ["AC-6"]
+    },
+    {
+      "id": "FR-6",
+      "description": "Seção Plano com preço R$ 99,90/mês (plano trimestral) e o que está incluso",
+      "priority": "P0",
+      "rationale": "Preço explícito filtra leads qualificados e elimina objeção antes do WhatsApp",
+      "acceptance": ["AC-7"]
+    },
+    {
+      "id": "FR-7",
+      "description": "Seção Sobre Mim com foto, credenciais e história do Hendrew Faggioni",
+      "priority": "P1",
+      "rationale": "Consultoria é uma relação de confiança — quem é o profissional importa",
+      "acceptance": ["AC-8"]
+    },
+    {
+      "id": "FR-8",
+      "description": "CTA final com botão de WhatsApp que abre conversa com mensagem pré-preenchida",
+      "priority": "P0",
+      "rationale": "CTA após todo o fluxo de convencimento — maior chance de conversão",
+      "acceptance": ["AC-9", "AC-10"]
+    },
+    {
+      "id": "FR-9",
+      "description": "Botão flutuante de WhatsApp visível em todas as seções durante o scroll",
+      "priority": "P1",
+      "rationale": "Alunos em estado de decisão não devem ter que rolar até o final para contatar",
+      "acceptance": ["AC-11"]
+    }
+  ],
+
+  "nonFunctional": [
+    {
+      "id": "NFR-1",
+      "category": "performance",
+      "description": "Página deve carregar em menos de 3 segundos em conexão 4G",
+      "metric": "LCP < 3s em dispositivo mobile com 4G (público vem do Instagram/Reels)"
+    },
+    {
+      "id": "NFR-2",
+      "category": "usability",
+      "description": "Layout mobile-first — experiência primária é o celular",
+      "metric": "100% funcional em viewports a partir de 320px. Nenhum texto cortado, nenhum botão inacessível"
+    },
+    {
+      "id": "NFR-3",
+      "category": "usability",
+      "description": "Página deve funcionar sem JavaScript — apenas HTML e CSS",
+      "metric": "Zero dependências JS. CTA WhatsApp usa link href puro (wa.me)"
+    },
+    {
+      "id": "NFR-4",
+      "category": "performance",
+      "description": "Imagens otimizadas para web",
+      "metric": "Imagens máximo 200KB cada. Formato JPG ou WebP"
+    },
+    {
+      "id": "NFR-5",
+      "category": "usability",
+      "description": "Acessibilidade básica — alt text em todas as imagens, contraste adequado",
+      "metric": "Zero imagens sem alt text. Contraste de texto mínimo 4.5:1 (WCAG AA)"
+    }
+  ],
+
+  "constraints": [
+    {
+      "id": "CON-1",
+      "type": "technical",
+      "description": "Zero frameworks, bibliotecas ou dependências externas — apenas HTML e CSS nativos",
+      "impact": "Sem Bootstrap, Tailwind, jQuery. CSS puro com variáveis Custom Properties"
+    },
+    {
+      "id": "CON-2",
+      "type": "technical",
+      "description": "Hospedagem via GitHub Pages — arquivos estáticos apenas",
+      "impact": "Sem backend, sem formulários com servidor. Contato exclusivamente via WhatsApp link"
+    },
+    {
+      "id": "CON-3",
+      "type": "business",
+      "description": "CTA principal é WhatsApp — não há sistema de pagamento nem matrícula online na V1",
+      "impact": "Conversão acontece na conversa, não na página. Página captura interesse, não fecha venda"
+    },
+    {
+      "id": "CON-4",
+      "type": "business",
+      "description": "Preço fixo R$ 99,90/mês no plano trimestral — não deve aparecer desconto ou variação de preço",
+      "impact": "Seção de plano deve apresentar apenas este valor sem comparação com outros planos na V1"
+    }
+  ],
+
+  "assumptions": [
+    {
+      "id": "ASM-1",
+      "description": "A maior parte do tráfego virá do Instagram/Reels via celular — não do Google",
+      "risk_if_wrong": "Se o tráfego for desktop, precisamos ajustar a hierarquia visual — mas mobile-first cobre ambos",
+      "validation_needed": false
+    },
+    {
+      "id": "ASM-2",
+      "description": "O número de WhatsApp do Hendrew estará disponível para inserir no código antes do deploy",
+      "risk_if_wrong": "Todos os CTAs ficam quebrados sem o número correto",
+      "validation_needed": true
+    },
+    {
+      "id": "ASM-3",
+      "description": "As fotos reais do studio/alunos estão disponíveis em formato digital e podem ser usadas",
+      "risk_if_wrong": "Sem fotos reais, a seção de resultados perde credibilidade significativa",
+      "validation_needed": false
+    },
+    {
+      "id": "ASM-4",
+      "description": "A página será hospedada no GitHub Pages sob URL gerada automaticamente (ex: faggionii.github.io/meu-primeiro-projeto) ou subpasta",
+      "risk_if_wrong": "Se houver domínio customizado, precisamos ajustar configuração do GitHub Pages",
+      "validation_needed": true
+    }
+  ],
+
+  "domainModel": [
+    {
+      "id": "DM-1",
+      "entity": "LandingPage",
+      "attributes": ["titulo", "meta_description", "og_image"],
+      "relationships": [
+        { "type": "has_many", "target": "Secao" }
+      ]
+    },
+    {
+      "id": "DM-2",
+      "entity": "Secao",
+      "attributes": ["id", "titulo", "conteudo", "cta"],
+      "relationships": [
+        { "type": "belongs_to", "target": "LandingPage" }
+      ]
+    },
+    {
+      "id": "DM-3",
+      "entity": "CTAWhatsApp",
+      "attributes": ["numero_telefone", "mensagem_preenchida", "url_wa_me"],
+      "relationships": [
+        { "type": "belongs_to", "target": "Secao" }
+      ]
+    },
+    {
+      "id": "DM-4",
+      "entity": "Foto",
+      "attributes": ["src", "alt", "secao"],
+      "relationships": [
+        { "type": "belongs_to", "target": "Secao" }
+      ]
+    }
+  ],
+
+  "interactions": [
+    {
+      "id": "INT-1",
+      "trigger": "Aluno clica no botão 'Quero começar' / 'Falar com Hendrew'",
+      "flow": [
+        "Botão com link href='https://wa.me/55XXXXXXXXXXX?text=...'",
+        "Navegador abre WhatsApp (app ou web)",
+        "Mensagem pré-preenchida: 'Olá Hendrew! Vi seu site e tenho interesse na consultoria online.'"
+      ],
+      "states": {
+        "loading": "N/A — link nativo, sem loading state",
+        "error": "Se WhatsApp não instalado, abre wa.me no navegador (fallback automático)",
+        "empty": "N/A"
+      }
+    },
+    {
+      "id": "INT-2",
+      "trigger": "Aluno acessa a página pelo celular",
+      "flow": [
+        "Página carrega com layout mobile (base CSS)",
+        "Botão flutuante de WhatsApp aparece no canto inferior direito",
+        "Aluno faz scroll pelas seções",
+        "CTA final aparece após seção de preços"
+      ],
+      "states": {
+        "loading": "CSS carrega junto com HTML — sem flash de conteúdo sem estilo",
+        "error": "N/A",
+        "empty": "N/A"
+      }
+    }
+  ],
+
+  "edgeCases": [
+    {
+      "id": "EC-1",
+      "scenario": "Aluno acessa pelo desktop (menos comum mas possível)",
+      "handling": "Layout responsivo expande via media queries min-width: 768px e 1024px. Conteúdo centralizado com max-width",
+      "severity": "low"
+    },
+    {
+      "id": "EC-2",
+      "scenario": "Imagem da seção Resultados não carrega (conexão lenta)",
+      "handling": "Atributo alt descritivo garante que o contexto seja entendido mesmo sem imagem",
+      "severity": "medium"
+    },
+    {
+      "id": "EC-3",
+      "scenario": "Aluno não tem WhatsApp instalado",
+      "handling": "Link wa.me abre versão web do WhatsApp no navegador automaticamente",
+      "severity": "low"
+    },
+    {
+      "id": "EC-4",
+      "scenario": "Página acessada em tela muito pequena (320px)",
+      "handling": "CSS mobile-first garante layout funcional desde 320px. Texto não quebra, botões clicáveis",
+      "severity": "medium"
+    }
+  ],
+
+  "terminology": [
+    {
+      "term": "Aluno",
+      "definition": "Cliente da consultoria online do Faggioni Personal Studio",
+      "synonyms": ["cliente"],
+      "avoid": ["usuário", "membro", "assinante"]
+    },
+    {
+      "term": "Consultoria online",
+      "definition": "Serviço de personal trainer à distância — treino + acompanhamento remoto",
+      "synonyms": ["treino online", "acompanhamento online"],
+      "avoid": ["coaching", "mentoria", "curso"]
+    },
+    {
+      "term": "Faggioni Personal Studio",
+      "definition": "Nome oficial do negócio — studio presencial e consultoria online do Hendrew Faggioni",
+      "synonyms": [],
+      "avoid": ["academia", "gym", "estúdio"]
+    },
+    {
+      "term": "CTA",
+      "definition": "Call to Action — botão ou link que convida o visitante a agir (no caso, contatar via WhatsApp)",
+      "synonyms": ["botão de ação", "botão de contato"],
+      "avoid": []
+    }
+  ],
+
+  "resolved": {
+    "estrutura_pastas": "faggioni-landing/ — pasta dedicada no repositório meu-primeiro-projeto",
+    "hospedagem": "GitHub Pages",
+    "paleta_cores": "Preto + branco limpo (minimalista) — fotos e conteúdo em destaque",
+    "whatsapp_numero": "PLACEHOLDER — recuperar do perfil do Instagram antes do deploy",
+    "mensagem_cta": "Olá Hendrew! Vi seu site e tenho interesse na consultoria online."
+  },
+
+  "openQuestions": [
+    {
+      "id": "OQ-1",
+      "question": "Confirmar número exato do WhatsApp (disponível no perfil do Instagram do Faggioni Personal Studio)",
+      "blocking": true,
+      "assignedTo": "@dev",
+      "note": "Usar placeholder SEU_NUMERO_AQUI no código — substituir antes do deploy"
+    }
+  ]
+}

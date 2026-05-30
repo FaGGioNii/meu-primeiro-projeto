@@ -1,0 +1,44 @@
+{
+  "storyId": "LP-001",
+  "assessedAt": "2026-05-30T00:00:00Z",
+  "assessedBy": "@architect",
+  "result": "SIMPLE",
+  "overridden": false,
+
+  "dimensions": {
+    "scope": {
+      "score": 1,
+      "notes": "2 arquivos principais: faggioni-landing/index.html e style.css. Pasta imagens/ para assets estáticos."
+    },
+    "integration": {
+      "score": 1,
+      "notes": "Nenhuma integração externa real. WhatsApp CTA é um link href puro (wa.me/NUMERO?text=...) — sem API, sem autenticação."
+    },
+    "infrastructure": {
+      "score": 1,
+      "notes": "GitHub Pages já está configurado no repositório. Nenhuma mudança de infraestrutura necessária — basta push na branch main."
+    },
+    "knowledge": {
+      "score": 1,
+      "notes": "HTML semântico + CSS mobile-first com Custom Properties. Padrões já definidos nas regras .claude/rules/. Nenhuma nova tecnologia."
+    },
+    "risk": {
+      "score": 1,
+      "notes": "Página estática completamente isolada. Não afeta nenhum sistema existente. Totalmente reversível."
+    }
+  },
+
+  "totalScore": 5,
+
+  "pipelinePhases": ["gather", "spec", "critique"],
+  "phasesCompleted": ["gather"],
+  "phasesRemaining": ["spec", "critique"],
+
+  "flags": [
+    "SIMPLE classification — fase de research pulada",
+    "Pular diretamente para @pm *write-spec após este assessment",
+    "Considerar criar story LP-001 com @sm antes de implementar"
+  ],
+
+  "estimatedEffort": "< 1 dia de implementação"
+}

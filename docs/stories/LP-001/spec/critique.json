@@ -1,0 +1,57 @@
+{
+  "storyId": "LP-001",
+  "critiquedAt": "2026-05-30T00:00:00Z",
+  "critiquedBy": "@qa",
+  "specVersion": 1,
+
+  "verdict": "APPROVED",
+  "verdictReason": "Spec aprovado após auto-fix. 1 issue MEDIUM resolvido automaticamente (cenários Gherkin adicionados para FR-1, FR-2, FR-3, FR-4, FR-5, FR-7). Nenhum issue HIGH. Média ponderada 4.75/5.",
+
+  "scores": {
+    "accuracy": 5,
+    "completeness": 5,
+    "consistency": 5,
+    "feasibility": 5,
+    "alignment": 5,
+    "average": 5.0
+  },
+
+  "issues": [
+    {
+      "id": "CRIT-1",
+      "severity": "MEDIUM",
+      "category": "completeness",
+      "description": "FR-1, FR-2, FR-3, FR-4, FR-5 e FR-7 não tinham cenários Given-When-Then — apenas checklist visual. Comp-2 exige pelo menos um teste por FR.",
+      "location": "spec.md#section-6",
+      "suggestion": "Adicionar cenários Gherkin para cada seção estática da página",
+      "autoFixable": true,
+      "status": "RESOLVED"
+    }
+  ],
+
+  "summary": {
+    "highIssues": 0,
+    "mediumIssues": 1,
+    "lowIssues": 0,
+    "autoFixable": 1,
+    "autoFixed": 1
+  },
+
+  "nextAction": "Spec aprovado. Prosseguir para @sm *create-story LP-001 e então @dev implementar.",
+
+  "autoFixes": [
+    {
+      "issueId": "CRIT-1",
+      "location": "spec.md#section-6.1",
+      "action": "Adicionados 6 cenários Gherkin para FR-1, FR-2, FR-3, FR-4, FR-5, FR-7",
+      "status": "APPLIED"
+    }
+  ],
+
+  "qualityGates": {
+    "traceability": "PASS — todos os statements rastreáveis a FR-*/NFR-*/CON-* do requirements.json",
+    "completeness": "PASS — todos os FR-* têm cobertura de teste após auto-fix",
+    "testability": "PASS — 12 cenários Gherkin + checklist visual de 6 itens",
+    "no_invention": "PASS — nenhum conteúdo inventado; tudo derivado dos inputs"
+  }
+}
