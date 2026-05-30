@@ -450,6 +450,65 @@ p {
 }
 
 
+/* DEPOIMENTOS */
+
+.grade-depoimentos {
+  display: grid;
+  gap: var(--espaco-grande);
+}
+
+.card-depoimento {
+  background-color: var(--cor-secundaria);
+  border-radius: var(--borda-raio-grande);
+  padding: var(--espaco-extra) var(--espaco-grande) var(--espaco-grande);
+  box-shadow: var(--sombra-card);
+  border: 1px solid var(--cor-borda);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-depoimento::before {
+  content: '\201C';
+  position: absolute;
+  top: 16px;
+  left: var(--espaco-grande);
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--cor-acento);
+  font-family: Georgia, serif;
+}
+
+.depoimento__texto {
+  font-size: var(--tamanho-base);
+  color: var(--cor-texto);
+  line-height: 1.7;
+  font-style: italic;
+  margin-bottom: var(--espaco-grande);
+}
+
+.depoimento__autor {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-top: var(--espaco-medio);
+  border-top: 1px solid var(--cor-borda);
+}
+
+.depoimento__nome {
+  font-size: var(--tamanho-base);
+  color: var(--cor-texto);
+  font-weight: 700;
+}
+
+.depoimento__tag {
+  font-size: var(--tamanho-pequeno);
+  color: var(--cor-acento);
+  font-weight: 600;
+}
+
+
 /* PLANO */
 
 .card-plano {
@@ -664,6 +723,10 @@ p {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .grade-depoimentos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .botao-flutuante__texto {
     display: inline;
   }
@@ -709,6 +772,10 @@ p {
 
   .grade-resultados {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .grade-depoimentos {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .card-resultado__foto {
