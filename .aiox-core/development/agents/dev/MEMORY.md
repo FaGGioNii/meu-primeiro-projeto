@@ -17,10 +17,24 @@
 - `tests/` — Test suites (mirrors source structure)
 - `docs/stories/` — Story files (active development)
 
+### Frontend Web Patterns (Faggioni Personal Studio)
+- **HTML**: semântico obrigatório — `<header>`, `<main>`, `<section>`, `<footer>`, nunca `<div>` onde existe elemento com significado
+- **HTML**: `<html lang="pt-BR">`, `charset="UTF-8"`, viewport meta — sempre presentes
+- **HTML**: toda `<img>` com `alt` descritivo; nunca `style=""` inline; scripts no final do `<body>`
+- **CSS**: mobile-first — estilos base sem media query, expandir com `min-width: 768px` e `min-width: 1024px`
+- **CSS**: nunca usar `max-width` para sobrescrever mobile — apenas `min-width`
+- **CSS**: variáveis no `:root` obrigatórias — nunca valores hardcoded repetidos
+- **CSS**: paleta do projeto → `--cor-primaria: #0d0d0d`, `--cor-acento: #25D366`, `--cor-fundo: #f5f5f5`
+- **CSS**: nomes de classes em **português com hífen** — `.botao-whatsapp`, `.secao-hero`, `.card-resultado`
+- **CSS**: nunca usar `!important`
+- **Zero dependências externas** — HTML e CSS nativos, sem frameworks, sem CDN, sem JS
+
 ### Git Rules
 - NEVER push — delegate to @devops
-- Conventional commits: `feat:`, `fix:`, `docs:`, `test:`, `chore:`, `refactor:`
-- Reference story: `feat: implement feature [Story NOG-18]`
+- Conventional commits **em português**: `feat:`, `fix:`, `style:`, `refactor:`, `docs:`, `chore:`, `remove:`
+- Descrição em minúsculo, verbo no infinitivo, sem ponto final, máximo 72 caracteres
+- Exemplos corretos: `feat: adiciona seção de depoimentos`, `fix: corrige botão flutuante no iPhone`
+- Nunca: `git add .` sem revisar `git status` antes
 
 ### Common Gotchas
 - Windows paths: use forward slashes in code, bash shell not cmd
