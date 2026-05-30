@@ -1,0 +1,46 @@
+name: conteudo-personal-squad
+version: 1.0.0
+description: Squad para criação de conteúdo de Instagram e WhatsApp para consultoria de personal trainer online — Faggioni Personal Studio
+author: Hendrew Faggioni
+license: UNLICENSED
+slashPrefix: conteudo
+
+aiox:
+  minVersion: "2.1.0"
+  type: squad
+
+components:
+  agents:
+    - pesquisador-tendencias.md
+    - redator-conteudo.md
+    - revisor-publico.md
+  tasks:
+    - pesquisar-tendencias-task.md
+    - criar-post-task.md
+    - revisar-post-task.md
+  workflows:
+    - pipeline-conteudo-semanal.md
+  templates:
+    - post-instagram-tmpl.md
+    - mensagem-whatsapp-tmpl.md
+  checklists:
+    - quality-gate-conteudo.md
+  tools: []
+  scripts: []
+  data: []
+
+config:
+  extends: extend
+
+dependencies:
+  node: []
+  python: []
+  squads: []
+
+tags:
+  - conteudo
+  - instagram
+  - whatsapp
+  - personal-trainer
+  - marketing
+  - consultoria-online
