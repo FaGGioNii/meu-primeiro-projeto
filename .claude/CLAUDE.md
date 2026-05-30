@@ -2,6 +2,24 @@
 
 You are working with Synkra AIOX, an AI-Orchestrated System for Full Stack Development.
 
+## Contexto do Projeto e do Usuário
+
+### Quem é o usuário
+- Personal trainer e dono de studio em **Franca-SP**
+- Está aprendendo desenvolvimento web e uso de IA
+- Iniciante em programação — explicações devem ser claras e sem jargão excessivo
+
+### Regras de comunicação
+- **Sempre responder em português**
+- Nunca inventar funcionalidades não pedidas — implementar apenas o que foi solicitado
+- Nunca usar frameworks, bibliotecas ou dependências sem autorização explícita do usuário
+
+### Contexto de negócio
+- Studio próprio com capacidade para até 3 alunos simultâneos por slot
+- Atendimento presencial: 6h–11h (18 alunos ativos, capacidade máxima atingida)
+- Consultoria online em construção: R$ 99,90/mês no plano trimestral (2 clientes ativos)
+- Estratégia de crescimento: Instagram/Reels para captar clientes online
+
 <!-- AIOX-MANAGED-START: core-framework -->
 ## Core Framework Understanding
 
